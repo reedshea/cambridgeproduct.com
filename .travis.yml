@@ -1,8 +1,4 @@
 language: ruby
-script: bundle exec jekyll build 
-
-deploy: 
-	- provider: github pages
-	  fqdn: "www.cambridgeproduct.com"
-	  name: "Reed Shea"
-	  email: "reedshea@gmail.com"
+script: 
+	- bundle exec jekyll build 
+	- bash ./deploy.sh
