@@ -1,4 +1,6 @@
 language: ruby
-script: 
-	- bundle exec jekyll build 
-	- bash ./deploy.sh
+script: bundle exec jekyll build 
+
+deploy:
+  provider: pages
+  github_token: $GITHUB_TOKEN
