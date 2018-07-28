@@ -21,7 +21,6 @@ gem "minima", "~> 2.0"
 # Gems for Travis CI
 gem "jekyll"
 gem "html-proofer"
-gem "rake"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
