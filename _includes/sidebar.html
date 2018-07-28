@@ -1,10 +1,10 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-        <a href="{{ site.baseurl }}">
+        <div>
           <h1>{{ site.title }}</h1>
           <h2>{{ site.subtitle }}</h2>
-        </a>
+        </div>
       <p class="lead">{{ site.description }}</p>
     </div>
 
@@ -25,9 +25,66 @@
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+<!--       <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-      <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+      <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
+      <span class="sidebar-nav-item" style="display:inline-block">
+        <div id="form-container" style="width:220px">
+          <div class="sidebar-about">
+            <br>
+            <p style="color: #fff; margin-top: 0; font-family: 'Lato'; font-weight: 300; font-size: 1.5em; margin: 0;">newsletter</p>
+          </div>
+          <div id="form-sub-container-1">
+            <form id="subscribe-form">
+                <input type="email" name="email-address" placeholder=" email address" required style="
+                  float: left;
+                  margin: 0;
+                  padding: 0;
+                  border: 0; 
+                  width: 80%; 
+                  height: 35px; 
+                  font-family: 'Lato';
+                  text-indent: 10px;">
+                <input type="submit" value=">" id="Form-submit" style="
+                  float: left;
+                  position: relative;
+                  vertical-align: top;
+                  width: 20%;
+                  height: 35px;
+                  padding: 0;
+                  font-size: 22px;
+                  color:white;
+                  text-align: center;
+                  background: #7f8c8d;
+                  border: 0;
+                  cursor: pointer;"/>
+            </form>
+          </div>
+          <div id="form-sub-container-2" style="display:none;">
+            Thanks!
+          </div>
+        </div>
+</span>
+<!-- Load jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!-- Submit form using jquery -->
+<script>
+// POST form data to zapier on submit
+$('#subscribe-form').submit(function(e){
+    e.preventDefault();
+    $.ajax({
+        url:'https://hooks.zapier.com/hooks/catch/3581624/gh7fav/',
+        type:'POST',
+        data:$("#subscribe-form").serialize(),
+        success:function(){
+            $("#form-sub-container-1").hide();
+        $("#form-sub-container-2").show(); 
+        }
+    });
+});
+</script>
+
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
