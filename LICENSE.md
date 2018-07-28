@@ -1,4 +1,13 @@
-# Released under MIT License
+#License
+
+##Cambridge Product
+
+Copyright (c) Reed Shea.
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+
+##Poole and Hyde theme for Jekyll
 
 Copyright (c) 2013 Mark Otto.
 
