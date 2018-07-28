@@ -1,8 +1,5 @@
 language: ruby
-script: 
-	#- set -e # halt script on error
-	- bundle exec jekyll build
-	# bundle exec htmlproofer ./_site --http-status-ignore "999" ./out
+script: bundle exec jekyll build 
 
 deploy: #!/bin/bash
 	set -o errexit -o nounset
