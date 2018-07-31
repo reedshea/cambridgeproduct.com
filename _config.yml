@@ -1,0 +1,26 @@
+# Dependencies
+markdown:         kramdown
+# highlighter:      pygments
+
+# Permalinks
+# permalink:        pretty
+
+# Setup
+title:            CAMBRIDGE
+subtitle:		  PRODUCT
+tagline:          'An experiment'
+description:      
+url:              http://www.cambridgeproduct.com
+baseurl:          /
+
+author:
+  name:           
+  url:            
+
+paginate:         5
+
+# Custom vars
+version:          0.1
+
+# github:
+#  repo:           https://github.com/poole/hyde
