@@ -26,6 +26,6 @@ gem "html-proofer"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
    gem 'jekyll-paginate'
-   gem 'redcarpet', '~> 3.0.0'
+   gem 'redcarpet', '~> 3.5.1'
 
 end
